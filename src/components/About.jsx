@@ -13,7 +13,14 @@ const About = () => {
             </span>
 </span> <br /><br />
       <h1 className='text-green-600 font-semibold text-xl'>Skills & Expertise</h1>
-      <span>Proficient in [C,C++,python,Java] Experienced with [React js and Express js] Strong grasp of [CSS and some css freamworks tailwind and Bootstrap] Excellent problem-solving skills Effective communicator and collaborator
+      <ul>
+            <li>Proficient in [C,C++,python,Java]</li>            
+            <li>Experienced with [React js and Express js]</li>            
+            <li>Strong grasp of [CSS and some css freamworks tailwind and Bootstrap]</li>            
+            <li>  Excellent problem-solving skills Effective communicator and collaborator</li>            
+
+      </ul>
+      <span> 
 </span> <br /><br />
       {/* <h1 className='text-green-600 font-semibold text-xl'>Professional Experience</h1>
       <span>[Job Title], [Company/Organization], [Dates] [Brief description of responsibilities and achievements] [Job Title], [Company/Organization], [Dates] [Brief description of responsibilities and achievements] [Freelance/Contract Work], [Client/Organization], [Dates] [Brief description of projects and contributions]
