@@ -37,14 +37,14 @@ const Contact = () => {
                     <label htmlFor="fname">FullName</label>
                     <input 
                     {...register("fname", { required: true })}
-                    type="text" name="fname" id="fname" className=' shadow apperance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focuse:out' placeholder='Enter your FullName'/>
+                    type="text" name="fname" id="fname" className=' shadow apperance-none border rounded-lg py-2 px-3 text-red-700 leading-tight focuse:out' placeholder='Enter your FullName'/>
                     {errors.fname && <span>This field is required</span>}
                 </div>
                 <div className='flex flex-col mb-4'>
                     <label htmlFor="email">Email Address</label>
                     <input
                     {...register("email", { required: true })}
-                    type="email" name="email" id="email" className=' shadow apperance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focuse:out' placeholder='Enter your email address'/>
+                    type="email" name="email" id="email" className=' shadow apperance-none border rounded-lg py-2 px-3 text-red-700 leading-tight focuse:out' placeholder='Enter your email address'/>
                     {errors.email && <span>This field is required</span>}
                 </div>
                 <div className='flex flex-col mb-4'>
@@ -52,7 +52,7 @@ const Contact = () => {
                     <textarea 
                                         {...register("message", { required: true })}
 
-                    name="message" id="message" className='shadow apperance-none border rounded-lg py-2 px-3 text-gray-700 leading-tight focuse:out' placeholder='Enter your your query'></textarea>
+                    name="message" id="message" className='shadow apperance-none border rounded-lg py-2 px-3 text-red-700 leading-tight focuse:out' placeholder='Enter your your query'></textarea>
                     {errors.message && <span>This field is required</span>}
                 </div>
                 <button type="submit" className='bg-black text-white rounded-xl px-3 py-2 hover:bg-slate-700 duration-300'>Send</button>
