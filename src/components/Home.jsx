@@ -8,8 +8,7 @@ import { SiDjango } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 import { ReactTyped } from "react-typed";
-import pic from "../../public/photo1.avif"
-
+import pic from "../../public/me.png"
 const Home = () => {
     return (
         <>

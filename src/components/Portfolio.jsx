@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import php from "../../public/php.png";
 import reactjs from "../../public/reactjs.png";
 import nodejs from "../../public/node.png";
 import AboutProj from './AboutProj';
-import MERN from "../../public/MERN.jpg"
+import MERN from "../../public/MERN.jpg";
 
 const Portfolio = () => {
     const [selectedProject, setSelectedProject] = useState(null);
-   
+    const modalRef = useRef(null);  // Create a ref for the modal
 
     const cardItem = [
         {
@@ -23,7 +23,8 @@ const Portfolio = () => {
             logo: nodejs,
             name: "HTML and Java Script",
             drc: "Weather App",
-            about: "This is Weather App project in that i use a free API for tempreter and for GUI i use Bootstrap and for handling API use java Script.",
+            about: `A responsive Weather App built using HTML, CSS, and JavaScript. It fetches real-time weather data from a weather API and displays temperature, humidity, wind speed, and weather descriptions for any searched city.` +
+                   `Technologies Used: HTML, CSS, JavaScript.`,
             live: "https://github.com/narayandeshpande/Weather_app.git"
         },
         {
@@ -31,24 +32,27 @@ const Portfolio = () => {
             logo: reactjs,
             name: "React Js",
             drc: "My portfolio",
-            about: "This given web site created by React Js",
-            live: "https://github.com/narayandeshpande/Weather_app.git"
+            about: "A personal portfolio website built using React for Narayan Pravin Deshpande, showcasing his skills in web development, including proficiency in C, C++, Java, Python, PHP, JavaScript, and frameworks like React.js, Express.js, and Django. The site features sections on his skills, projects, experience, and contact information.",
+            live: "https://github.com/narayandeshpande/Portfolios-.git"
         },
         {
             id: 6,
             logo: MERN,
             name: "MERN Stack",
-            drc: "Book Store",
-            about: "This is MERN stack project in that i use react js for frontend and express js for backend and for datastoring use MongoDB.",
-            live: "https://github.com/narayandeshpande/Weather_app.git"
+            drc: "Word File to PDF file Converter",
+            about: "This is a MERN stack project that involves using Multer module for file storage and Docx-pdf module for converting Word documents to PDF files. The frontend is developed using React.js while the backend is implemented using Express.js. The project aims to provide a user-friendly interface for uploading and converting Word documents to PDF format.",
+            live: "https://github.com/narayandeshpande/Word_to_pdf.git"
         }
     ];
 
     const openModal = (project) => {
         setSelectedProject(project);
-        document.getElementById("my_modal_3").showModal();
+        if (modalRef.current) {
+            modalRef.current.showModal();
+        } else {
+            console.error("Modal element is not available.");
+        }
     };
-
 
     return (
         <div name="Projects" className='max-w-screen-2xl container max-auto px-4 md:px-20 mt-10'>
@@ -73,6 +77,15 @@ const Portfolio = () => {
                     ))}
                 </div>
             </div>
+            <dialog id="my_modal_3" ref={modalRef}>
+                <form method="dialog" className="modal-box">
+                    <h3 className="font-bold text-lg">About the Project</h3>
+                    <p className="py-4">{selectedProject}</p>
+                    <div className="modal-action">
+                        <button className="btn">Close</button>
+                    </div>
+                </form>
+            </dialog>
             {selectedProject && <AboutProj abouts={selectedProject} />}
         </div>
     );
