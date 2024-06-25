@@ -42,6 +42,14 @@ const Portfolio = () => {
             drc: "Word File to PDF file Converter",
             about: "This is a MERN stack project that involves using Multer module for file storage and Docx-pdf module for converting Word documents to PDF files. The frontend is developed using React.js while the backend is implemented using Express.js. The project aims to provide a user-friendly interface for uploading and converting Word documents to PDF format.",
             live: "https://github.com/narayandeshpande/Word_to_pdf.git"
+        },
+        {
+            id: 7,
+            logo: reactjs,
+            name: "React Js",
+            drc: "Country Information",
+            about: "This project is a web application designed to provide detailed information about different countries. It utilizes React for building the user interface and Tailwind CSS for styling, ensuring a responsive and visually appealing design. The application fetches data from a free API to display relevant country details.",
+            live: "https://github.com/narayandeshpande/Country-Information.git"
         }
     ];
 
