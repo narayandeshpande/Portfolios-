@@ -11,7 +11,6 @@ import React from 'react';
                 <p className="py-4">{abouts}</p>
                 <div className="modal-action">
                     <button className="btn">Close</button>
-
                     {/* <a href={abouts.live}><button className="btn">Live</button></a> */}
                 </div>
             </form>

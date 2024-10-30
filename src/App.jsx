@@ -20,7 +20,6 @@ const App = () => {
       <Contact/>
       <div className="flex justify-center items-center">
       <Footer/>
-
       </div>
     </div>
     <Toaster />

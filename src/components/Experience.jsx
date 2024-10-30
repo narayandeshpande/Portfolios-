@@ -9,6 +9,8 @@ import c from "../../public/c-lang.jpeg"
 import cpp from "../../public/cpp.png"
 import php from "../../public/php.png";
 import reactjs from "../../public/reactjs.png";
+import express from "../../public/express.png"
+import mongo from "../../public/mongodb.jpg"
 
 
 const Experience = () => {
@@ -63,6 +65,16 @@ const Experience = () => {
             logo:reactjs,
             name:"React Js"
         },
+        {
+            id:11,
+            logo:express,
+            name:"Express Js"
+        },
+        {
+            id:12,
+            logo:mongo,
+            name:"MongoDB"
+        }
 
     ]
   return (

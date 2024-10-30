@@ -3,6 +3,7 @@ import pic from"../../public/photo.avif"
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import {Link} from "react-scroll"
+import resume from '../../public/Narayan Pravin Deshpande.pdf'
 const Navbar = () => {
   const [menu,setnemu]=useState(false)
   const navItems=[
@@ -29,8 +30,7 @@ const Navbar = () => {
     {
       id:5,
       text:'Contact'
-
-    }
+    },
 
   ]
   return (
@@ -56,10 +56,10 @@ const Navbar = () => {
         offset={-70}
         activeClass='active'
         > {text}</Link>
-        
        </li>
     ))
   }
+  <li><a href="../../public/Narayan Pravin Deshpande.pdf">Resume</a></li>
         </ul>
         <div className="md:hidden " onClick={()=>setnemu(!menu)}>
 
@@ -83,6 +83,7 @@ const Navbar = () => {
       > {text}</Link></li>
     ))
   }
+ <li><a href="../../public/Narayan Pravin Deshpande.pdf" download>Resume</a></li>
             </ul>
             </div>
       )
